@@ -7,6 +7,7 @@ public class BulletController : MonoBehaviour
     protected private float speed = 1.2f;
     public ParticleSystem explosionParticle;
     public ParticleSystem smokeParticle;
+    public GameObject ammo;
     private GameObject target;
     // Start is called before the first frame update
     void Start()
@@ -28,8 +29,8 @@ public class BulletController : MonoBehaviour
         } else
         {
             explosionParticle.Play();
-            Destroy(gameObject, 2.0f);
-            
+            ammo.SetActive(false);
+            Destroy(gameObject, 3.0f);
         }
 
     }

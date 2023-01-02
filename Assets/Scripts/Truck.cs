@@ -17,21 +17,20 @@ public class Truck : Vehicle
     void Update()
     {
         moveVehicle();
+        if (MoveState == 3)
+        {
+            Action();
+        }
     }
 
     protected override void Action()
     {
-        StartCoroutine(loadOff());
+        loadOff();
     }
 
-    IEnumerator loadOff()
+    void loadOff()
     {
-        yield return new WaitForSeconds(5);
-        Vector3 direction = getTarget().transform.position - transform.position;
-        while (direction.magnitude > 0.5f)
-        {
-            truckLoad.transform.Translate(direction * speed * Time.deltaTime);
-            direction = getTarget().transform.position - transform.position;
-        }
+        Vector3 direction = getTarget().transform.position - truckLoad.transform.position;
+        truckLoad.transform.Translate(direction * speed * Time.deltaTime);
     }
 }

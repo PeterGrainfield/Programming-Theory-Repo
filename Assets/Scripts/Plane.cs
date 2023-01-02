@@ -12,6 +12,7 @@ public class Plane : Vehicle
     {
         SetComponent();
         speed = 1.0f;
+        moveStateName[3] = "I have no idea XD";
     }
 
     // Update is called once per frame
