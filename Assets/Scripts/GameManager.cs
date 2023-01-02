@@ -9,6 +9,7 @@ using UnityEditor;
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    private string userName = "No name";
 
     private void Awake()
     {
@@ -32,6 +33,21 @@ public class GameManager : MonoBehaviour
     }
 
     public void ResetScene()
+    {
+        StartGame();
+    }
+
+    public void SetUserName(string name)
+    {
+        userName = name;
+    }
+
+    public string GetUserName()
+    {
+        return userName;
+    }
+
+    public void StartGame()
     {
         SceneManager.LoadScene(1);
     }
