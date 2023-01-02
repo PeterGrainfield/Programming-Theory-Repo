@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Tank : Vehicle
 {
     public GameObject bulletPrefab;
@@ -21,7 +22,7 @@ public class Tank : Vehicle
         moveVehicle();
     }
 
-    protected override void Action()
+    protected override void Action() // POLYMORPHISM
     {
         barrel.transform.LookAt(getTarget().transform);
         Instantiate(bulletPrefab, transform.position + bulletOffset, bulletPrefab.transform.rotation);

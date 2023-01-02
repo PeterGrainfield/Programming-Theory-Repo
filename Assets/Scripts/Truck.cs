@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+// INHERITANCE
 public class Truck : Vehicle
 {
     public GameObject truckLoad;
@@ -23,7 +24,7 @@ public class Truck : Vehicle
         }
     }
 
-    protected override void Action()
+    protected override void Action() // POLYMORPHISM
     {
         loadOff();
     }

@@ -15,7 +15,7 @@ public class Vehicle : MonoBehaviour
     // 3 : Action
     [SerializeField]
     private int moveState = 0;
-    public int MoveState { get => moveState; set => moveState = value; }
+    public int MoveState { get => moveState; set => moveState = value; } // ENCAPSULATION
     protected string[] moveStateName = {"Stop","Move Forward","Move Backward","Action"};
 
 

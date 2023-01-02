@@ -26,7 +26,7 @@ public class Plane : Vehicle
         }
     }
 
-    protected override Vector3 getDirectionToTarget()
+    protected override Vector3 getDirectionToTarget() // POLYMORPHISM
     {
         Vector3 direction = getTarget().transform.position - transform.position;
         transform.LookAt(getTarget().transform);
