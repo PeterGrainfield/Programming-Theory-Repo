@@ -240,7 +240,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afa7152e18daf4e4fb869e3315c70b9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  userNameText: {fileID: 0}
+  userNameText: {fileID: 1946956550}
 --- !u!1 &420891476
 GameObject:
   m_ObjectHideFlags: 0
@@ -1472,9 +1472,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 920890416}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: StartGame
+      - m_Target: {fileID: 163002159}
+        m_TargetAssemblyTypeName: TitleUIHandler, Assembly-CSharp
+        m_MethodName: SetNameAndGo
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
